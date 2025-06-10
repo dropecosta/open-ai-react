@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Travel App AI
 
-## Getting Started
+`travel-app` is a [Next.js](https://nextjs.org/) project that uses the AI SDK to dynamically generate and stream travel advice, leveraging OpenAI's GPT-4o model.
 
-First, run the development server:
+## Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 14
+- React 18
+- Tailwind CSS
+- AI SDK: `@ai-sdk/openai` and `ai`
+- Zod for schema validation
+
+## Project Structure
+
+```
+travel-app/
+├── public/               # Static assets (images, icons)
+├── src/
+│   └── app/
+│       ├── api/          # API routes (Next.js App Router)
+│       ├── actions.js    # Server-side function for UI streaming
+│       ├── layout.js     # Default layout component
+│       ├── page.js       # Main page with form to fetch the component
+│       └── globals.css   # Global styles (Tailwind CSS)
+├── next.config.mjs       # Next.js configuration
+├── tailwind.config.js    # Tailwind CSS configuration
+├── package.json          # Dependencies and scripts
+└── README.md             # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Node.js v14 or higher
+- npm (or yarn)
+- OpenAI API key
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation & Setup
 
-## Learn More
+1. Clone this repository:
+   ```powershell
+   git clone https://github.com/dropecosta/open-ai-react.git
+   cd ai-react
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```powershell
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Create a `.env.local` file in the root directory with your OpenAI API key:
+   ```env
+   OPENAI_API_KEY=your_api_key_here
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Available Scripts
 
-## Deploy on Vercel
+- `npm run dev`   – Starts the development server
+- `npm run build` – Builds the production assets
+- `npm start`     – Runs the application in production mode
+- `npm run lint`  – Runs the Next.js linter
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Start the development server:
+   ```powershell
+   npm run dev
+   ```
+2. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Click **Get Component** to receive streaming travel advice rendered as a React component.
+
+
+## License
+
+This project is licensed under the MIT License.
+
+<br/><br/>
+
+
+Developed with 🧡 by **Pedro Reis**  | 📧 dropecosta@gmail.com  | [LinkedIn](https://www.linkedin.com/in/dropecosta/) | [GitHub](https://github.com/dropecosta)
